@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,10 +20,10 @@
                     <img src="assets/images/logo.png" alt="Logo">
                 </div>
                 <nav class="nav-bar">
-                    <a href="#" class="nav-link">ГЛАВНАЯ</a>
-                    <a href="#" class="nav-link">МЕНЮ</a>
-                    <a href="#" class="nav-link">О НАС</a>
-                    <a href="#" class="nav-link">БРОНЬ</a>
+                    <a href="#header" class="nav-link">ГЛАВНАЯ</a>
+                    <a href="#our-menu" class="nav-link">МЕНЮ</a>
+                    <a href="#our-story" class="nav-link">О НАС</a>
+                    <a href="#footer" class="nav-link">БРОНЬ</a>
                 </nav>
                 <div class="header-right">
                     <div class="cart">
@@ -34,7 +35,7 @@
                     <div class="phone-number">+999-888-76-54</div>
                     <div class="divider"></div>
                     <div class="phone-subtext">Свяжитесь с нами для бронирования</div>
-                    <button class="btn1">
+                    <button class="btn1" onclick="window.location.href='#footer'">
                         <span class="btn-text">ЗАКАЗ СТОЛИКА</span>
                     </button>
                 </div>
@@ -47,24 +48,24 @@
                     <div class="subtitle">ДОМ ЛУЧШЕЙ ЕДЫ</div>
                     <div class="line"></div>
                 </div>
-                <button class="cta-btn">VIEW MENU</button>
+                <button class="cta-btn" onclick="window.location.href='#our-menu'">VIEW MENU</button>
             </div>
         </header>
 
         <!-- FEATURES -->
         <section class="features">
             <div class="feature-card">
-                <img src="assets/images/feature-1.png" alt="Feature 1" class="feature-icon">
+                <i class="fas fa-magic feature-icon"></i>
                 <h3 class="feature-title">Магическая <span>Атмосфера</span></h3>
                 <p class="feature-text">В нашем заведении царит магическая атмосфера наполненная вкусными ароматами</p>
             </div>
             <div class="feature-card">
-                <img src="assets/images/feature-2.png" alt="Feature 2" class="feature-icon">
+                <i class="fas fa-utensils feature-icon"></i>
                 <h3 class="feature-title">Лучшее качество <span>Еды</span></h3>
                 <p class="feature-text">Качество нашей Еды - отменное!</p>
             </div>
             <div class="feature-card">
-                <img src="assets/images/feature-3.png" alt="Feature 3" class="feature-icon">
+                <i class="fas fa-tags feature-icon"></i>
                 <h3 class="feature-title">Недорогая <span>Еда</span></h3>
                 <p class="feature-text">Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!</p>
             </div>
@@ -149,33 +150,32 @@
             <div class="our-menu-background">
             <h2 class="our-menu-title">Наше меню</h2>
                 <div class="menu-items-container">
-                    <div class="menu-item-card recommended-card">
-                        <div class="recommended-label">RECOMMENDED</div>
+                    <div class="menu-item-card">
                         <div class="menu-item-image-wrapper">
-                            <img src="assets/images/hamburger-1.png" alt="Гамбургер макси" class="menu-item-image">
+                            <img src="images_all/hambourger.png" alt="Гамбургер макси" class="menu-item-image">
                             <div class="price-tag">420</div>
                         </div>
                         <h3 class="menu-item-title">Гамбургер макси</h3>
                         <p class="menu-item-description">Максимально толстый слой мяса</p>
-                        <button class="order-btn">ЗАКАЗАТЬ</button>
+                        <button class="order-btn" onclick="window.location.href='#footer'">ЗАКАЗАТЬ</button>
                     </div>
                     <div class="menu-item-card">
                         <div class="menu-item-image-wrapper">
-                            <img src="assets/images/hamburger-1.png" alt="Гамбургер макси" class="menu-item-image">
+                            <img src="images_all/hambourger.png" alt="Гамбургер макси" class="menu-item-image">
                             <div class="price-tag">420</div>
                         </div>
                         <h3 class="menu-item-title">Гамбургер макси</h3>
                         <p class="menu-item-description">Максимально толстый слой мяса</p>
-                        <button class="order-btn">ЗАКАЗАТЬ</button>
+                        <button class="order-btn" onclick="window.location.href='#footer'">ЗАКАЗАТЬ</button>
                     </div>
                     <div class="menu-item-card">
                         <div class="menu-item-image-wrapper">
-                            <img src="assets/images/hamburger-1.png" alt="Гамбургер макси" class="menu-item-image">
+                            <img src="images_all/hambourger.png" alt="Гамбургер макси" class="menu-item-image">
                             <div class="price-tag">420</div>
                         </div>
                         <h3 class="menu-item-title">Гамбургер макси</h3>
                         <p class="menu-item-description">Максимально толстый слой мяса</p>
-                        <button class="order-btn">ЗАКАЗАТЬ</button>
+                        <button class="order-btn" onclick="window.location.href='#footer'">ЗАКАЗАТЬ</button>
                     </div>
                 </div>
             </div>
@@ -206,9 +206,9 @@
         <section id="our-chefs">
             <h2 class="our-chefs-title">Наши <span class="colored-text">Повара</span></h2>
             <div class="chefs-content">
-                <div class="chef-card"><img src="images_all/povar1.png" alt="Повар 1"></div>
-                <div class="chef-card"><img src="images_all/povar2.png" alt="Повар 2"></div>
-                <div class="chef-card"><img src="images_all/povar3.png" alt="Повар 3"></div>
+                <div class="chef-card"><img src="images_all/povar1.png" alt="Повар 1" class="chef-image"></div>
+                <div class="chef-card"><img src="images_all/povar2.png" alt="Повар 2" class="chef-image"></div>
+                <div class="chef-card"><img src="images_all/povar3.png" alt="Повар 3" class="chef-image"></div>
             </div>
         </section>
 

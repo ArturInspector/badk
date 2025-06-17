@@ -57,6 +57,27 @@ body {
     line-height: 19px;
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #D67E34;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #D67E34;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .header-right {
@@ -105,6 +126,7 @@ body {
     align-items: center;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-text {
@@ -112,6 +134,11 @@ body {
     font-size: 14px;
     line-height: 19px;
     color: #FFFFFF;
+}
+
+.btn1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* HERO SECTION */
@@ -172,6 +199,12 @@ body {
     border: none;
     margin-left: 356px;
     margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* FEATURES SECTION */
@@ -526,28 +559,10 @@ body {
     position: relative;
 }
 
-.recommended-card {
-    margin-top: -50px; /* Adjust based on image to raise it slightly */
-}
-
-.recommended-label {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FF0000; /* Red color for RECOMMENDED */
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 3px;
-    font-weight: 700;
-    font-size: 14px;
-    z-index: 10;
-}
-
 .menu-item-image-wrapper {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust height as needed */
+    height: 200px;
     margin-bottom: 20px;
 }
 
@@ -606,24 +621,28 @@ body {
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .order-btn:hover {
-    background-color: #e06600;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* REVIEW SECTION */
 .review-section {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0; /* Moved from #footer */
-    background-color: #f8f8f8; /* Moved from #footer */
-    color: #000; /* Moved from #footer */
-    text-align: center; /* Moved from #footer */
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+.review-section::before {
+    display: none;
 }
 
 .review-text {
@@ -632,29 +651,40 @@ body {
     line-height: 30px;
     color: #656363;
     margin-bottom: 40px;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 .visitor-avatar {
-    width: 90px;
-    height: 90px;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #D67E34;
+    position: relative;
+    z-index: 1;
 }
 
 .visitor-name {
     font-family: 'Tinos', serif;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 24px;
+    line-height: 28px;
     color: #000000;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .visitor-nickname {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 25px;
     color: #656363;
+    position: relative;
+    z-index: 1;
 }
 
 /* GALLERY SECTION */
@@ -713,32 +743,68 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    width: 1138px;
-    margin: 0 auto;
+    margin-top: 50px;
 }
 
-.chef-card img {
+.chef-card {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.chef-image {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px; /* Optional: adds a slight border radius to chef images */
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #D67E34;
+    margin-bottom: 20px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
 }
 
 /* FINAL IMAGE SECTION */
 .final-image-container {
     width: 100%;
-    padding: 100px 0; /* Add some padding around the image */
+    height: 600px;
     background: url('images_all/konec.png') no-repeat center center;
     background-size: cover;
-    min-height: 400px; /* Adjust height as needed to show the background image */
+    position: relative;
+}
+
+.final-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* FOOTER */
 #footer {
-    width: 100%;
-    padding: 50px 0; /* Restoring a basic padding */
-    background-color: #333; /* Restoring a basic background */
-    color: #fff; /* Restoring a basic text color */
-    text-align: center; /* Restoring a basic text alignment */
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Добавляем отступ для якорных ссылок */
+section[id] {
+    scroll-margin-top: 100px;
 }
   
